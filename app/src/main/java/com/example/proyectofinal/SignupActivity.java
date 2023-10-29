@@ -35,18 +35,6 @@ public class SignupActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 //aqui deberia estar lo de firebase pero no lo entiendo :p
-
-                String name = registroNombre.getText().toString();
-                String email = registroEmail.getText().toString();
-                String username = registroUsername.getText().toString();
-                String password = registroPassword.getText().toString();
-
-                //HelperClass helperClass = new HelperClass(name, email, username, password);
-                //no entiendo mucho AYUDAAAAAAAA
-
-                Toast.makeText(SignupActivity.this, "El registro ha sido exitoso!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
-                startActivity(intent);
             }
         });
         inicioRedText.setOnClickListener(new View.OnClickListener() {

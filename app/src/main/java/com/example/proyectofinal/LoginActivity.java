@@ -29,13 +29,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-          //      if (!validarUsuario() | !validarPassword()) {
-
-           //     } else {
-                    // aqui va un check de los datos :D
-                    // checkUser();
-                }
-          //  }
+            }
         });
         registroRedText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,25 +40,5 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-  //  public Boolean validarUsuario() {
-    //    String val = ingresoUsername.getText().toString();
-     //   if (val.isEmpty()) {
-      //      ingresoUsername.setError("El usuario no puede estar vacío");
-       //     return false;
-       // } else {
-        //    ingresoUsername.setError(null);
-         //   return true;
-       // }
-    //}
 
-    //public Boolean validarPassword() {
-      //  String val = ingresoPassword.getText().toString();
-       // if (val.isEmpty()) {
-        //    ingresoPassword.setError("El password no puede estar vacío");
-         //   return false;
-        //} else {
-         //   ingresoPassword.setError(null);
-          //  return true;
-        //}
-    //}
 }
