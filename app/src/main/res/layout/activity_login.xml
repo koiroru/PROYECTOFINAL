@@ -19,14 +19,16 @@
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
             app:cardCornerRadius="30dp"
+            android:background="@color/white"
             app:cardElevation="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/borde"
+                android:background="@color/white"
                 android:orientation="vertical"
+
                 android:padding="24dp">
 
                 <TextView
