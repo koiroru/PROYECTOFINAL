@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity" >
+    tools:context=".SignupActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/fondo"
         android:gravity="center"
         android:orientation="vertical"
-        tools:context=".LoginActivity">
+        android:background="@drawable/fondo"
+        tools:context=".SignupActivity">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -25,25 +25,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/borde"
                 android:orientation="vertical"
                 android:padding="24dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Ingreso"
+                    android:text="Registro"
                     android:textAlignment="center"
                     android:textColor="#515151"
                     android:textSize="36sp"
                     android:textStyle="bold" />
 
-
                 <EditText
-                    android:id="@+id/inicio_usuario"
+                    android:id="@+id/registro_nombre"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
+                    android:background="@drawable/borde"
+                    android:drawableLeft="@drawable/personita"
+                    android:drawablePadding="8dp"
+                    android:hint="Nombre"
+                    android:padding="8dp"
+                    android:textColor="#515151" />
+
+                <EditText
+                    android:id="@+id/registro_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/borde"
+                    android:drawableLeft="@drawable/email"
+                    android:drawablePadding="8dp"
+                    android:hint="Email"
+                    android:padding="8dp"
+                    android:textColor="#515151" />
+
+                <EditText
+                    android:id="@+id/registro_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/borde"
                     android:drawableLeft="@drawable/user"
                     android:drawablePadding="8dp"
@@ -52,7 +74,7 @@
                     android:textColor="#515151" />
 
                 <EditText
-                    android:id="@+id/inicio_password"
+                    android:id="@+id/registro_password"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="20dp"
@@ -65,25 +87,24 @@
                     android:textColor="#515151" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/inicio_btn"
+                    android:id="@+id/registro_btn"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginTop="30dp"
-                    android:text="Login"
-                    android:background="@drawable/boton"
+                    android:text="Siguiente"
                     android:textSize="18sp"
-                    app:cornerRadius="20dp" />
+                    android:background="@drawable/boton"/>
 
                 <TextView
-                    android:id="@+id/registro_RedText"
+                    android:id="@+id/ingreso_RedText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:padding="8dp"
-                    android:text="No estás registrado? Hazlo aquí"
+                    android:text="Ya tienes una cuenta? Ingresa"
                     android:textColor="#515151"
-                    android:textSize="18sp" />
+                    android:textSize="19sp" />
 
             </LinearLayout>
 
