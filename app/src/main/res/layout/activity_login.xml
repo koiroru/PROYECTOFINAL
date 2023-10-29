@@ -69,7 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginTop="30dp"
-                    android:text="Login"
+                    android:text="Siguiente"
                     android:background="@drawable/boton"
                     android:textSize="18sp"
                     app:cornerRadius="20dp" />
