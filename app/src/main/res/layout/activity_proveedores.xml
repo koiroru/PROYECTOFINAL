@@ -6,4 +6,92 @@
     android:layout_height="match_parent"
     tools:context=".ProveedoresActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ProveedoresActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@color/white"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp">
+
+            <LinearLayout
+                android:layout_width="359dp"
+                android:layout_height="659dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mis Proveedores"
+                    android:textAlignment="center"
+                    android:textColor="#515151"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/inicio_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/borde"
+                    android:drawableLeft="@drawable/user"
+                    android:drawablePadding="8dp"
+                    android:hint="Proveedor"
+                    android:padding="8dp"
+                    android:textColor="#515151" />
+
+                <EditText
+                    android:id="@+id/inicio_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/borde"
+                    android:drawableLeft="@drawable/personita"
+                    android:drawablePadding="8dp"
+                    android:hint="Direccion"
+                    android:inputType="textPassword"
+                    android:padding="8dp"
+                    android:textColor="#515151" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/inicio_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/boton"
+                    android:text="Agregar"
+                    android:textSize="18sp"
+                    app:cornerRadius="20dp"
+                    />
+
+                <fragment
+                    android:id="@+id/mapita"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="314dp"
+                    android:layout_height="330dp"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.542"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:context=".GoogleMaps"
+                    tools:ignore="MissingClass">
+                </fragment>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
