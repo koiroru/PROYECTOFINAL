@@ -33,7 +33,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Registro"
+                    android:text="Registrate \nAhora!"
                     android:textAlignment="center"
                     android:textColor="#515151"
                     android:textSize="36sp"
@@ -43,13 +43,13 @@
                     android:id="@+id/registro_nombre"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/borde"
                     android:drawableLeft="@drawable/personita"
                     android:drawablePadding="8dp"
                     android:hint="Nombre"
                     android:padding="8dp"
-                    android:textColor="#515151" />
+                    android:textColor="#666666" />
 
                 <EditText
                     android:id="@+id/registro_email"
@@ -61,7 +61,7 @@
                     android:drawablePadding="8dp"
                     android:hint="Email"
                     android:padding="8dp"
-                    android:textColor="#515151" />
+                    android:textColor="#666666" />
 
                 <EditText
                     android:id="@+id/registro_usuario"
@@ -73,7 +73,7 @@
                     android:drawablePadding="8dp"
                     android:hint="Username"
                     android:padding="8dp"
-                    android:textColor="#515151" />
+                    android:textColor="#666666" />
 
                 <EditText
                     android:id="@+id/registro_password"
@@ -86,12 +86,12 @@
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:padding="8dp"
-                    android:textColor="#515151" />
+                    android:textColor="#666666" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/registro_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="50dp"
                     android:layout_marginTop="30dp"
                     android:text="Siguiente"
                     android:textSize="18sp"
