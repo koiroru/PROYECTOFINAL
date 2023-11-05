@@ -64,18 +64,6 @@
                     android:textColor="#666666" />
 
                 <EditText
-                    android:id="@+id/registro_usuario"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/borde"
-                    android:drawableLeft="@drawable/user"
-                    android:drawablePadding="8dp"
-                    android:hint="Username"
-                    android:padding="8dp"
-                    android:textColor="#666666" />
-
-                <EditText
                     android:id="@+id/registro_password"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"

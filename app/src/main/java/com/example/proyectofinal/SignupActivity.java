@@ -1,60 +1,93 @@
 package com.example.proyectofinal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
+
+
+
 public class SignupActivity extends AppCompatActivity {
 
-    EditText registroNombre, registroEmail, registroUsername, registroPassword;
+    EditText registroEmail, registroPassword;
     TextView inicioRedText;
     Button registroBtn;
+    FirebaseAuth mAuth;
 
-    //aqui tambien HAY QUE AGREGAR FIREBASEEE NO ENTIENDOOOO
-    //    FirebaseDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        registroNombre = findViewById(R.id.registro_nombre);
+        mAuth = FirebaseAuth.getInstance();
+
         registroEmail = findViewById(R.id.registro_email);
-        registroUsername = findViewById(R.id.registro_usuario);
         registroPassword = findViewById(R.id.registro_password);
         registroBtn = findViewById(R.id.registro_btn);
+
         inicioRedText = findViewById(R.id.ingreso_RedText);
 
         registroBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //aqui deberia estar lo de firebase pero no lo entiendo :p
+                String  emailUser, passUser;
 
-                String name = registroNombre.getText().toString();
-                String email = registroEmail.getText().toString();
-                String username = registroUsername.getText().toString();
-                String password = registroPassword.getText().toString();
+                emailUser = String.valueOf(registroEmail.getText());
+                passUser = String.valueOf(registroPassword.getText());
 
-                //HelperClass helperClass = new HelperClass(name, email, username, password);
-                //no entiendo mucho AYUDAAAAAAAA
 
-                Toast.makeText(SignupActivity.this, "El registro ha sido exitoso!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
-                startActivity(intent);
+                if (TextUtils.isEmpty(emailUser)) {
+                    Toast.makeText(SignupActivity.this, "Ingresa un email", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(passUser)) {
+                    Toast.makeText(SignupActivity.this, "Ingresa una contraseña", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                mAuth.createUserWithEmailAndPassword(emailUser, passUser)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(SignupActivity.this, "El registro fue exitoso",
+                                            Toast.LENGTH_SHORT).show();
+
+                                    Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                                    startActivity(intent);
+                                } else {
+
+                                    Toast.makeText(SignupActivity.this, "Tenemos un problema con el registro",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
             }
         });
         inicioRedText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
-        }
+    }
 }
+
+

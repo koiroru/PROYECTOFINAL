@@ -71,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="20dp"
-                    android:text="Siguiente"
+                    android:text="INICIA"
                     android:background="@drawable/boton"
                     android:textSize="18sp"
                     app:cornerRadius="20dp" />
@@ -80,10 +80,12 @@
                     android:id="@+id/google_btn"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Con GOOGLE"
+                    android:layout_marginTop="10dp"
+                    android:drawableEnd="@drawable/googleicon"
+                    android:paddingEnd="15dp"
+                    android:text="INGRESA CON GOOGLE"
                     android:textSize="18sp"
-                    android:background="@drawable/boton"/>
+                    android:background="@drawable/borde"/>
 
                 <TextView
                     android:id="@+id/registro_RedText"
