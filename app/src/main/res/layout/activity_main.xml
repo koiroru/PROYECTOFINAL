@@ -8,86 +8,115 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tarjeton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="300sp"
+            android:layout_margin="16dp"
+            android:background="@drawable/tarjeta">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="300sp"
-                android:layout_margin="16dp"
-                android:background="@drawable/tarjeta">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingTop="24dp"
+                android:text="Inversion mensual"
+                android:textAlignment="viewStart"
+                android:textColor="#fff"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.123"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="24dp"
-                    android:paddingStart="15dp"
-                    android:text="Inversion mensual"
-                    android:textAlignment="viewStart"
-                    android:textColor="#fff"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.123"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/insumosvalortotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingTop="30dp"
+                android:text="$250.000 CLP"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="45dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-                <TextView
-                    android:id="@+id/insumosvalortotal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="30dp"
-                    android:text="$250.000 CLP"
-                    android:paddingStart="15dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="45dp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/textView"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/textView"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+            <TextView
+                android:id="@+id/aumentomensual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="↑ 50.000 mes anterior"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/insumosvalortotal"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/insumosvalortotal"
+                app:layout_constraintTop_toBottomOf="@+id/insumosvalortotal" />
 
-                <TextView
-                    android:id="@+id/aumentomensual"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="↑ 50.000 mes anterior"
-                    android:textColor="@color/white"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/insumosvalortotal"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/insumosvalortotal"
-                    app:layout_constraintTop_toBottomOf="@+id/insumosvalortotal" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="10dp"
+                android:text="↓ 37.000 dos meses"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/insumosvalortotal"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/aumentomensual"
+                app:layout_constraintTop_toBottomOf="@+id/insumosvalortotal" />
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="↓ 37.000 dos meses"
-                    android:paddingStart="10dp"
-                    android:textColor="@color/white"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/insumosvalortotal"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/aumentomensual"
-                    app:layout_constraintTop_toBottomOf="@+id/insumosvalortotal" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="40dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_baseline_add_24"
+                app:tint="@color/white"
+                tools:layout_editor_absoluteX="294dp"
+                tools:layout_editor_absoluteY="226dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-    </ScrollView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/insumos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/search"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
