@@ -20,7 +20,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCKU-cqn4PCprgXwUQP0xKDguUtUNimaRQ"></meta-data>
+            android:value="AIzaSyBZEILB33JNWaKq2Ym3bBcGLockAHjdp8U"></meta-data>
         <activity
             android:name=".AgregarInsumosActivity"
             android:exported="false" />

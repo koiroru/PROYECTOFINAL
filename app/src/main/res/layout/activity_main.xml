@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/fondo"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -14,119 +14,97 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/tarjeton"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="297dp"
-            android:layout_margin="16dp"
-            android:background="@drawable/tarjeta">
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:background="@color/white"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="15dp"
-                android:paddingTop="24dp"
-                android:text="Inversion mensual"
-                android:textAlignment="viewStart"
-                android:textColor="#fff"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.123"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:orientation="vertical"
 
-            <TextView
-                android:id="@+id/insumosvalortotal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="15dp"
-                android:paddingTop="30dp"
-                android:text="$250.000 CLP"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="45dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/textView"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                android:padding="24dp">
 
-            <TextView
-                android:id="@+id/aumentomensual"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="↑ 50.000 mes anterior"
-                android:textColor="@color/white"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/insumosvalortotal"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/insumosvalortotal"
-                app:layout_constraintTop_toBottomOf="@+id/insumosvalortotal" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mis Insumos"
+                    android:textAlignment="center"
+                    android:textColor="#515151"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:paddingStart="10dp"
-                android:text="↓ 37.000 dos meses"
-                android:textColor="@color/white"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/insumosvalortotal"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/aumentomensual"
-                app:layout_constraintTop_toBottomOf="@+id/insumosvalortotal" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_margin="40dp"
-                android:layout_marginEnd="32dp"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/add"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                app:tint="@color/white" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <EditText
+                    android:id="@+id/agreganombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/borde"
+                    android:textAlignment="center"
+                    android:drawablePadding="8dp"
+                    android:hint="Nombre Insumo"
+                    android:padding="8dp"
+                    android:textColor="#515151" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="387dp"
-            android:layout_height="308dp"
-            android:layout_marginStart="10dp"
-            android:background="@drawable/borde"
-            android:paddingTop="20dp">
+                <EditText
+                    android:id="@+id/agregarvalor"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/borde"
+                    android:drawablePadding="8dp"
+                    android:hint="Valor Insumo"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="#515151" />
 
-        </androidx.recyclerview.widget.RecyclerView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnagregar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/boton"
+                    android:text="Agregar"
+                    android:textSize="18sp"
+                    app:cornerRadius="20dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ListView
+            android:id="@+id/listviewInsumos"
+            android:layout_width="match_parent"
+            android:layout_height="347dp">
+
+        </ListView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="81dp"
+            android:layout_height="94dp"
+            android:background="@color/white"
             android:orientation="horizontal"
             android:paddingTop="15dp">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/prov"
-                android:layout_width="45dp"
-                android:layout_height="68dp"
+                android:layout_width="44dp"
+                android:layout_height="81dp"
                 android:layout_weight="10"
                 android:background="@drawable/personita"
                 android:text="" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/fijo"
-                android:layout_width="45dp"
-                android:layout_height="63dp"
+                android:layout_width="51dp"
+                android:layout_height="81dp"
                 android:layout_weight="10"
                 android:background="@drawable/fijo"
                 android:backgroundTint="#98ff96"
@@ -134,24 +112,24 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/inicio"
-                android:layout_width="49dp"
-                android:layout_height="68dp"
+                android:layout_width="60dp"
+                android:layout_height="81dp"
                 android:layout_weight="10"
                 android:background="@drawable/casita"
                 android:text="" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/var"
-                android:layout_width="51dp"
-                android:layout_height="63dp"
+                android:layout_width="61dp"
+                android:layout_height="81dp"
                 android:layout_weight="10"
                 android:background="@drawable/variable"
                 android:text="" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cal"
-                android:layout_width="48dp"
-                android:layout_height="63dp"
+                android:layout_width="58dp"
+                android:layout_height="81dp"
                 android:layout_weight="10"
                 android:background="@drawable/calculadora"
                 android:text="" />

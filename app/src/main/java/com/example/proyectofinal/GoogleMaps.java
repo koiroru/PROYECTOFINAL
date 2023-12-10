@@ -15,6 +15,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+
+
 public class GoogleMaps extends AppCompatActivity implements OnMapReadyCallback{
 
     Button Regreso;
@@ -24,7 +26,7 @@ public class GoogleMaps extends AppCompatActivity implements OnMapReadyCallback{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_googlemaps);
+        setContentView(R.layout.activity_google_maps);
 
         SupportMapFragment mapFragment = (SupportMapFragment)
                 getSupportFragmentManager().findFragmentById(R.id.mapita);
@@ -77,8 +79,8 @@ public class GoogleMaps extends AppCompatActivity implements OnMapReadyCallback{
                 .title("Tercer Proveedor")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
 
-        LatLng mipuntito = new LatLng(lon4, lat4);
-        mMap.addMarker(new MarkerOptions().position(mipuntito)
+        LatLng puntito4 = new LatLng(lon4, lat4);
+        mMap.addMarker(new MarkerOptions().position(puntito4)
                 .title("Cuarto Proveedor")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 
