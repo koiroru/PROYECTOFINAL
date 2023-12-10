@@ -14,33 +14,37 @@
         android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
         app:cardCornerRadius="30dp"
-        android:background="@drawable/boton"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
         app:cardElevation="20dp">
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_width="367dp"
+            android:layout_height="652dp"
             android:layout_gravity="center_horizontal"
-            android:padding="20dp"
-            android:background="@drawable/borde">
+            android:background="@drawable/borde"
+            android:orientation="vertical"
+            android:padding="20dp">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Calcula tu valor neto"
-                android:textStyle="bold"
-                android:textSize="30sp"
                 android:textAlignment="center"
-                android:textColor="#666666"/>
+                android:textColor="#666666"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textresultado"
+                android:id="@+id/textResultado"
                 android:layout_width="match_parent"
                 android:layout_height="63dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/borde"
                 android:text=""
+                android:paddingTop="10dp"
                 android:textAlignment="center"
-                android:textColor="#666666"
+                android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -48,67 +52,70 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Costo Materiales"
+                android:paddingTop="10dp"
+                android:text="Costo de Produccion"
                 android:textAlignment="center"
                 android:textColor="#666666"
-                android:paddingTop="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/agregamaterial"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/agregamaterial"
-                android:background="@drawable/borde"
                 android:layout_marginTop="20dp"
+                android:background="@drawable/borde"
+                android:hint="Costo total de producción"
+                android:inputType="numberDecimal"
                 android:padding="16dp"
-                android:hint="Ingresa valor material"
                 android:textAlignment="center"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mano de Obra"
+                android:paddingTop="10dp"
+                android:text="Unidades Producidas"
                 android:textAlignment="center"
                 android:textColor="#666666"
-                android:paddingTop="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/agregaunidades"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/agregamano"
-                android:background="@drawable/borde"
                 android:layout_marginTop="20dp"
+                android:background="@drawable/borde"
+                android:hint="Número de unidades"
+                android:inputType="number"
                 android:padding="16dp"
-                android:hint="Ingresa tiempo"
                 android:textAlignment="center"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="10dp"
-                android:text="Maquinaria"
+                android:text="Mano de Obra"
                 android:textAlignment="center"
                 android:textColor="#666666"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/agregamano"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/agregamaquinaria"
-                android:background="@drawable/borde"
                 android:layout_marginTop="20dp"
+                android:background="@drawable/borde"
+                android:hint="Costo de mano de obra"
+                android:inputType="numberDecimal"
                 android:padding="16dp"
-                android:hint="Ingresa tiempo"
                 android:textAlignment="center"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btncalcular"
@@ -119,7 +126,20 @@
                 android:text="CALCULAR"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnregreso"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="270dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/boton"
+                android:text="←"
+                android:textSize="30dp"
+                android:textStyle="bold" />
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
 
 </ScrollView>

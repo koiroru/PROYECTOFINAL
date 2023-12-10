@@ -21,7 +21,7 @@ import java.util.List;
 
 public class ProveedoresActivity extends AppCompatActivity {
 
-    Button AgregarProv;
+    Button AgregarProv, BotonRegresar;
     EditText puntito1;
     EditText puntito2;
     EditText puntito3;
@@ -36,7 +36,19 @@ public class ProveedoresActivity extends AppCompatActivity {
         puntito3 = findViewById(R.id.puntito3);
         puntito4 = findViewById(R.id.puntito4);
         AgregarProv = findViewById(R.id.agregar_btn);
+        BotonRegresar = findViewById(R.id.btnregreso);
 
+
+        BotonRegresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(
+                        getApplicationContext(),
+                        MainActivity.class
+                );
+                startActivity(intent);
+            }
+        });
 
         AgregarProv.setOnClickListener(new View.OnClickListener() {
             @Override

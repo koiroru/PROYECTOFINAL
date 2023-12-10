@@ -102,7 +102,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="387dp"
-            android:layout_height="329dp"
+            android:layout_height="308dp"
             android:layout_marginStart="10dp"
             android:background="@drawable/borde"
             android:paddingTop="20dp">
@@ -142,16 +142,16 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/var"
-                android:layout_width="54dp"
-                android:layout_height="81dp"
+                android:layout_width="51dp"
+                android:layout_height="63dp"
                 android:layout_weight="10"
                 android:background="@drawable/variable"
                 android:text="" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cal"
-                android:layout_width="56dp"
-                android:layout_height="81dp"
+                android:layout_width="48dp"
+                android:layout_height="63dp"
                 android:layout_weight="10"
                 android:background="@drawable/calculadora"
                 android:text="" />
