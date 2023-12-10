@@ -79,7 +79,7 @@ public class GoogleMaps extends AppCompatActivity implements OnMapReadyCallback{
 
         LatLng mipuntito = new LatLng(lon4, lat4);
         mMap.addMarker(new MarkerOptions().position(mipuntito)
-                .title("Cuarto Proveedro")
+                .title("Cuarto Proveedor")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 
 

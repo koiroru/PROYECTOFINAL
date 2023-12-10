@@ -33,8 +33,9 @@
                 android:textColor="#666666"/>
 
             <TextView
+                android:id="@+id/textresultado"
                 android:layout_width="match_parent"
-                android:layout_height="66dp"
+                android:layout_height="63dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/borde"
                 android:text=""
@@ -43,55 +44,70 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Costo Materiales"
+                android:textAlignment="center"
+                android:textColor="#666666"
+                android:paddingTop="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/agreganombre"
+                android:id="@+id/agregamaterial"
                 android:background="@drawable/borde"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="Ingresa el Nombre"
-                android:gravity="start|center_vertical"
+                android:hint="Ingresa valor material"
+                android:textAlignment="center"
                 android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mano de Obra"
+                android:textAlignment="center"
+                android:textColor="#666666"
+                android:paddingTop="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/agregavalor"
+                android:id="@+id/agregamano"
                 android:background="@drawable/borde"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="Ingresa el Valor"
-                android:gravity="start|center_vertical"
+                android:hint="Ingresa tiempo"
+                android:textAlignment="center"
                 android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="Maquinaria"
+                android:textAlignment="center"
+                android:textColor="#666666"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/agregac"
+                android:id="@+id/agregamaquinaria"
                 android:background="@drawable/borde"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="Ingresa la Cantidad"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/black"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/agregacan"
-                android:background="@drawable/borde"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="Ingresa la Cantidad"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/black"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/agregacantidad"
-                android:background="@drawable/borde"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="Ingresa la Cantidad"
-                android:gravity="start|center_vertical"
+                android:hint="Ingresa tiempo"
+                android:textAlignment="center"
                 android:textColor="@color/black"/>
 
             <androidx.appcompat.widget.AppCompatButton
