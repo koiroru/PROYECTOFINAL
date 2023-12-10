@@ -2,27 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/prov"
+        android:id="@+id/menu_prov"
         android:title="Proveedor"
         android:icon="@drawable/personita"/>
 
     <item
-        android:id="@+id/fijo"
+        android:id="@+id/menu_fijo"
         android:title="Fijo"
         android:icon="@drawable/fijo"/>
 
     <item
-        android:id="@+id/fab"
+        android:id="@+id/menu_inicio"
         android:title=""
         android:enabled="false"/>
 
     <item
-        android:id="@+id/var"
+        android:id="@+id/menu_var"
         android:title="Variable"
         android:icon="@drawable/variable"/>
 
     <item
-        android:id="@+id/cal"
+        android:id="@+id/menu_cal"
         android:title="Neto"
         android:icon="@drawable/calculadora"/>
 

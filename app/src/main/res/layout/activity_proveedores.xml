@@ -24,7 +24,7 @@
 
             <LinearLayout
                 android:layout_width="359dp"
-                android:layout_height="659dp"
+                android:layout_height="461dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@color/white"
                 android:orientation="vertical"
@@ -40,27 +40,50 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/nombre_proveedor"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/borde"
-                    android:drawableLeft="@drawable/user"
-                    android:drawablePadding="8dp"
-                    android:hint="Proveedor"
-                    android:padding="8dp"
-                    android:textColor="#515151" />
-
-                <EditText
-                    android:id="@+id/direccion_proveedor"
+                    android:id="@+id/puntito1"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/borde"
                     android:drawableLeft="@drawable/personita"
                     android:drawablePadding="8dp"
-                    android:hint="Direccion"
-                    android:inputType="textPassword"
+                    android:hint="1 Direccion"
+                    android:padding="8dp"
+                    android:textColor="#515151" />
+
+                <EditText
+                    android:id="@+id/puntito2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/borde"
+                    android:drawableLeft="@drawable/personita"
+                    android:drawablePadding="8dp"
+                    android:hint=" 2 Direccion"
+                    android:padding="8dp"
+                    android:textColor="#515151" />
+
+                <EditText
+                    android:id="@+id/puntito3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/borde"
+                    android:drawableLeft="@drawable/personita"
+                    android:drawablePadding="8dp"
+                    android:hint="3 Direccion"
+                    android:padding="8dp"
+                    android:textColor="#515151" />
+
+                <EditText
+                    android:id="@+id/puntito4"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/borde"
+                    android:drawableLeft="@drawable/personita"
+                    android:drawablePadding="8dp"
+                    android:hint="4 Direccion"
                     android:padding="8dp"
                     android:textColor="#515151" />
 
@@ -72,22 +95,8 @@
                     android:background="@drawable/boton"
                     android:text="Agregar"
                     android:textSize="18sp"
-                    app:cornerRadius="20dp"
-                    />
+                    app:cornerRadius="20dp" />
 
-                <fragment
-                    android:id="@+id/mapita"
-                    android:name="com.google.android.gms.maps.SupportMapFragment"
-                    android:layout_width="314dp"
-                    android:layout_height="330dp"
-                    android:layout_marginTop="24dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.542"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:context=".GoogleMaps"
-                    tools:ignore="MissingClass">
-                </fragment>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
