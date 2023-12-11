@@ -45,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Proveedor = findViewById(R.id.prov);
-        Fijos = findViewById(R.id.fijo);
         Inicios = findViewById(R.id.inicio);
-        Variable = findViewById(R.id.var);
         Calculadora = findViewById(R.id.cal);
 
         eTNombre = findViewById(R.id.agreganombre);
@@ -112,27 +110,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            Fijos.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), FijoActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            });
 
             Inicios.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            });
-            Variable.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), VariableActivity.class);
                     startActivity(intent);
                     finish();
                 }
