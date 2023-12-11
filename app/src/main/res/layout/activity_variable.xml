@@ -20,37 +20,22 @@
         tools:layout_editor_absoluteY="16dp"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="40dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/add"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:tint="@color/white"
-        tools:ignore="MissingConstraints" />
-
     <ProgressBar
         android:id="@+id/progressBarCircular"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="269dp"
         android:layout_height="224dp"
         android:layout_gravity="center"
+        android:layout_marginTop="68dp"
         android:indeterminate="false"
         android:max="100"
         android:progress="0"
         android:progressBackgroundTint="@color/white"
         android:progressTint="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="67dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -65,4 +50,21 @@
         tools:layout_editor_absoluteY="334dp">
 
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="40dp"
+        android:layout_marginTop="244dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/add"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:tint="@color/white"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="340dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
