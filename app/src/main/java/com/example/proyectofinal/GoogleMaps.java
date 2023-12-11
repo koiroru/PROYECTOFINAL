@@ -1,11 +1,11 @@
 package com.example.proyectofinal;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -22,7 +22,7 @@ public class GoogleMaps extends AppCompatActivity implements OnMapReadyCallback{
     Button Regreso;
     double lat = 0.0;
     double lon = 0.0;
-
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +49,7 @@ public class GoogleMaps extends AppCompatActivity implements OnMapReadyCallback{
     }
 
     @Override
-    public void onMapReady(@NonNull GoogleMap googleMap) {
+    public void onMapReady(GoogleMap googleMap) {
         GoogleMap mMap = googleMap;
 
         double lon1 = getIntent().getDoubleExtra("lo1", 0.0);
